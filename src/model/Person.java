@@ -1,4 +1,4 @@
-package ctr;
+package model;
 import java.sql.Date;
 
 public class Person {
@@ -22,8 +22,5 @@ public class Person {
 		this.createdDate = createdDate;
 	}
 	
-	public void CreatePerson(String name, String address, String postalCode, String city, String phone, String email)
-	{
-		
-	}
+	
 }
