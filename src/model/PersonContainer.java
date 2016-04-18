@@ -1,10 +1,9 @@
 package model;
 import java.util.*;
 
-
 public class PersonContainer {
 	private static PersonContainer instance;
-	private ArrayList<Person> Persons;
+	private ArrayList<Person> persons;
 	
 	
 	
@@ -19,6 +18,21 @@ public static PersonContainer getInstance(){
 
 public void addPerson(Person p)
 {
-	Persons.add(p);
+	persons.add(p);
+}
+public ArrayList<Person> getAll(){
+	return persons;
+}
+public Person findPersonByPhone(String phone){
+	Person p = null;
+	for(int i = 0; i < persons.size() && p == null; i++){
+		if(persons.get(i).getPhone() == phone){
+			p = persons.get(i);
+		}
+	}
+	return p;
+}
+public void removePerson(int index){
+	persons.remove(index);
 }
 }
