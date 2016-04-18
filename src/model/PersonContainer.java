@@ -17,14 +17,8 @@ public static PersonContainer getInstance(){
     return instance;
 }
 
-public void CreatePerson(Person p)
+public void addPerson(Person p)
 {
-	
 	Persons.add(p);
-}
-
-public void UpdatePerson(String name, String address, String postalCode, String city, String phone, String email)
-{
-	
 }
 }
