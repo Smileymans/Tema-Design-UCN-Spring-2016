@@ -11,5 +11,5 @@ public PersonUI(){
 	//start();
 }
 
-
+//metode her
 }
