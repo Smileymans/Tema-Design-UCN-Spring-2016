@@ -1,7 +1,7 @@
 package ui;
 import java.util.*;
 import ctr.*;
-import model.Person;
+import model.*;
 
 public class PersonUI {
 private PersonCtr pCtr;

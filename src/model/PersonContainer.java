@@ -14,11 +14,16 @@ public static PersonContainer getInstance(){
     	
     }
     return instance;
+    
+}
+
+private PersonContainer(){
+	this.persons = new ArrayList<>();
 }
 
 public void addPerson(Person p)
 {
-	persons.add(p);
+	this.persons.add(p);
 }
 public ArrayList<Person> getAll(){
 	return persons;

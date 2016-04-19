@@ -1,7 +1,7 @@
 package ctr;
-import java.util.*;
 import model.*;
-
+import java.util.*;
+import ui.*;
 
 public class PersonCtr {	
 	
@@ -28,5 +28,9 @@ public class PersonCtr {
 	}
 	public List<Person> getAll(){
 		return PersonContainer.getInstance().getAll();
+	}
+	public Person findPerson(String phone){
+		Person p = PersonContainer.getInstance().findPersonByPhone(phone);
+		return p;
 	}
 }
