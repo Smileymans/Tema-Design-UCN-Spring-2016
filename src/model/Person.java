@@ -1,5 +1,4 @@
-package model;
-import java.sql.Date;
+package model;;
 
 public class Person {
 
@@ -9,9 +8,8 @@ public class Person {
 	private String city;
 	private String phone;
 	private String email;
-	private Date createdDate;
 	
-	public Person(String name, String address, String postalCode, String city, String phone, String email, Date createdDate)
+	public Person(String name, String address, String postalCode, String city, String phone, String email)
 	{
 		this.setName(name);
 		this.setAddress(address);
@@ -19,7 +17,6 @@ public class Person {
 		this.setCity(city);
 		this.setPhone(phone);
 		this.setEmail(email);
-		this.setCreatedDate(createdDate);
 	}
 
 	public String getName() {
@@ -69,14 +66,9 @@ public class Person {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public Date getCreatedDate() {
-		return createdDate;
-	}
-
-	public void setCreatedDate(Date createdDate) {
-		this.createdDate = createdDate;
-	}
 	
+	public String toString(){
+		return "name: " + name + ", address: " + ", postalCode: " + postalCode + ", city: " + city + ", phone: " + phone + ", email: " + email;
+	}
 	
 }
