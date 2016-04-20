@@ -35,8 +35,10 @@ public class DvdContainer {
 		}
 		return p;
 	}
-	public void removeDvd(int index){
-		dvds.remove(index);
+	public void removeDvd(DVD dvd){
+		if(dvds.contains(dvd)){
+			dvds.remove(dvd);
+		}
 	}
 
 }

@@ -45,7 +45,7 @@ public class DVDUI {
 				updateDvds();
 				break;
 			case 4:
-				deleteDvds();
+				deleteDVD();
 				break;
 			default:
 				break;
@@ -81,11 +81,21 @@ public class DVDUI {
 		}
 		
 		private void updateDvds(){
-			System.out.println("Test af updateDvds");
+			String currentTitle = si.inputString("enter title of the DVD from the list you want to update.");
+			System.out.println(currentTitle);
+			String barcode = si.inputString(" Barcode: ");
+			String title = si.inputString(" Title: ");
+			String artist = si.inputString(" Artist: ");
+			String publicationDate = si.inputString(" Publication Date: ");
+			String genre = si.inputString(" Genre: ");
+			DVDCtr myDvdCtr = new DVDCtr();
+			myDvdCtr.updateDvd(currentTitle, barcode, title, artist, publicationDate, genre);
+		
 		}
 		
-		private void deleteDvds(){
-			System.out.println("Test af deleteDvds");
+		private void deleteDVD(){
+			String phone = si.inputString(" Phone: ");
+			pCtr.deleteDVD(phone);
 		}
 	
 }
