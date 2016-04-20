@@ -12,7 +12,7 @@ private SingleInput si = new SingleInput();
 	}
 	
 	private void start(){
-		boolean goOn = true;1	
+		boolean goOn = true;	
 		ListChoice<Integer> mainMenu = new ListChoice<>();
 		mainMenu.addOption("Close", 0);
 		mainMenu.addOption("Friends", 1);
