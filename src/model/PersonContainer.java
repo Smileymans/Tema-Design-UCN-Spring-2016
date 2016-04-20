@@ -31,13 +31,17 @@ public ArrayList<Person> getAll(){
 public Person findPersonByPhone(String phone){
 	Person p = null;
 	for(int i = 0; i < persons.size() && p == null; i++){
-		if(persons.get(i).getPhone() == phone){
+		if(persons.get(i).getPhone().equals(phone)){
 			p = persons.get(i);
 		}
 	}
 	return p;
 }
-public void removePerson(int index){
-	persons.remove(index);
+public void removePerson(Person person){
+		if(persons.contains(person)){
+			persons.remove(person);
+		}
+	}
+	
 }
-}
+

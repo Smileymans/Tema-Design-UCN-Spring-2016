@@ -1,4 +1,6 @@
 package ui;
+import model.*;
+import ctr.*;
 
 public class MainUI {
 private SingleInput si = new SingleInput();
@@ -6,13 +8,9 @@ private SingleInput si = new SingleInput();
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-        new MainUI().start();		
+        new MainUI().start();
 	}
 	
-	/*private void start() {
-		System.out.println("hej");
-		
-	}*/
 	private void start(){
 		boolean goOn = true;1	
 		ListChoice<Integer> mainMenu = new ListChoice<>();
@@ -20,10 +18,10 @@ private SingleInput si = new SingleInput();
 		mainMenu.addOption("Friends", 1);
 		mainMenu.addOption("DVDs", 2);
 		mainMenu.addOption("Loan", 3);
-		System.out.println("Make your choice");	
+		System.out.println();	
 		
 		while(goOn){
-			Integer choice = mainMenu.input("*** Main menu ***\nVælg opgave", false);
+			Integer choice = mainMenu.input("*** Main menu ***\nChoose a option", false);
 			switch(choice){
 			case 0:
 				goOn = false;

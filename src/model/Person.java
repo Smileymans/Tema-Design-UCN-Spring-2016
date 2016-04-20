@@ -68,7 +68,7 @@ public class Person {
 	}
 	
 	public String toString(){
-		return "name: " + name + ", address: " + ", postalCode: " + postalCode + ", city: " + city + ", phone: " + phone + ", email: " + email;
+		return "name: " + name + ", address: " + address + ", postalCode: " + postalCode + ", city: " + city + ", phone: " + phone + ", email: " + email;
 	}
 	
 }

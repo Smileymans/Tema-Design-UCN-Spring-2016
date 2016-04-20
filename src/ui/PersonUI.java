@@ -77,13 +77,23 @@ private void start(){
 		}
 		System.out.println();
 	}
-	
+	//Metoden skal skrives hvis ikke currentnumber eksistere...
 	private void updatePersons(){
-		System.out.println("Test af updatePersons");
+		String currentPhone = si.inputString("enter phonenumber of the person from the list you want to update.");
+		System.out.println(currentPhone);
+		String name = si.inputString(" Name: ");
+		String address = si.inputString(" Address: ");
+		String postalCode = si.inputString(" Postalcode: ");
+		String city = si.inputString(" City: ");
+		String phone = si.inputString(" Phone: ");
+		String email = si.inputString(" Email: ");
+		PersonCtr myPersonCtr = new PersonCtr();
+		myPersonCtr.updatePerson(currentPhone, name, address, postalCode, city, phone, email);
 	}
 	
 	private void deletePersons(){
-		System.out.println("Test af deletePersons");
+		String phone = si.inputString(" Phone: ");
+		pCtr.deletePerson(phone);
 	}
 
 }
