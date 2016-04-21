@@ -68,7 +68,7 @@ public class DVDUI {
 			System.out.println();
 		}
 		private void viewDVD(DVD p){
-			System.out.println("DVD: " + p.toString());
+			System.out.println(" - The following DVD was added to your system: " + p.toString());
 		}
 		
 		private void viewDvds(){

@@ -16,10 +16,10 @@ public void addOption(String text, T value){
 }
 
 /**
- * Displays the options and prompts the user to choose an aption.<br>
- * @param title - Specifies what the title above the option list should be
- * @param showCancelOptions - when <code>true</code>, option <code>0</code> becomes "Cancel"
- * @return The object that corresponds to the option selected by the user. If showCancelOption was true, a returned null value indicates that "Cancel" was selected
+ * Displays the options and prompts the user to choose an option.
+ * @param
+ * @param 
+ * @return 
  */
 public T input(String title, boolean showCancelOption){
 	System.out.println(title);

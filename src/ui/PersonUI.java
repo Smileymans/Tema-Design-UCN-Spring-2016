@@ -50,10 +50,11 @@ private void start(){
 	}
 }
 	private void exit(){
-		System.out.println("Test af exit");
+		System.out.println(" - Going one level up to Main menu");
 	}
 	
 	private void addPerson(){
+		
 		System.out.println("Add person:");
 		String name = si.inputString(" Name: ");
 		String address = si.inputString(" Address: ");
@@ -66,11 +67,11 @@ private void start(){
 		System.out.println();
 	}
 	private void viewPerson(Person p){
-		System.out.println("Person: " + p.toString());
+		System.out.println(" - The following person was added to your system: " + p.toString());
 	}
 	
 	private void viewPersons(){
-		System.out.println("All persons in the system: ");
+		System.out.println(" - All persons in the system: ");
 		List<Person> persons = pCtr.getAll();
 		for(Person p : persons){
 			System.out.println(" " + p);
@@ -80,6 +81,8 @@ private void start(){
 	//Metoden skal skrives hvis ikke currentnumber eksistere...
 	private void updatePersons(){
 		String currentPhone = si.inputString("enter phonenumber of the person from the list you want to update.");
+		Person p = pCtr.findPerson(currentPhone);
+		if(p != null){
 		System.out.println(currentPhone);
 		String name = si.inputString(" Name: ");
 		String address = si.inputString(" Address: ");
@@ -89,6 +92,7 @@ private void start(){
 		String email = si.inputString(" Email: ");
 		PersonCtr myPersonCtr = new PersonCtr();
 		myPersonCtr.updatePerson(currentPhone, name, address, postalCode, city, phone, email);
+		}
 	}
 	
 	private void deletePersons(){
