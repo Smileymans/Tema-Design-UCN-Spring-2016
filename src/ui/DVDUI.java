@@ -92,10 +92,10 @@ public class DVDUI {
 			myDvdCtr.updateDvd(currentTitle, barcode, title, artist, publicationDate, genre);
 		
 		}
-		
+		 
 		private void deleteDVD(){
-			String phone = si.inputString(" Phone: ");
-			pCtr.deleteDVD(phone);
+			String title = si.inputString(" Choose which DVD to delete by writing the title: ");
+			pCtr.deleteDVD(title);
 		}
 	
 }

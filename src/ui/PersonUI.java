@@ -92,7 +92,7 @@ private void start(){
 	}
 	
 	private void deletePersons(){
-		String phone = si.inputString(" Phone: ");
+		String phone = si.inputString(" Choose which person to delete by writing their phonenumber: ");
 		pCtr.deletePerson(phone);
 	}
 
